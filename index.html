@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vite App</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <section id="app">
+      <h1 class="title">Counter</h1>
+      <div>
+        <h2 class="is-1">{{count}}</h2>
+        <a class="button" v-on:click="increase">count up</a>
+      </div>
+    </section>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          count: 0,
+        },
+        methods: {
+          increase() {
+            this.count += 1;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
